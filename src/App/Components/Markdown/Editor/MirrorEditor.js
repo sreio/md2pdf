@@ -9,7 +9,7 @@ const Editor = ({ className, setText }) => {
   return (
     <CodeMirror
       className={className}
-      value={initialText}
+      value={window.localStorage.getItem("sreio_md2pdf")??initialText}
       options={{
         mode: 'gfm',
         theme: 'darcula',
@@ -17,6 +17,7 @@ const Editor = ({ className, setText }) => {
         lineWrapping: true
       }}
       onChange={(editor, data, value) => {
+        window.localStorage.setItem('sreio_md2pdf', value);
         setText(value);
       }}
     />
