@@ -1,5 +1,4 @@
-export const initialText = `
-# 个人信息
+export const initialText = `# 个人信息
 * 李某/男
 * 手机：15512341234
 * Email：15512341234@163.com
